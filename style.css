@@ -23,6 +23,11 @@ body.preload * {
     transition: background-color 0s, opacity 0s, color 0s, width 0s, height 0s, padding 0s, margin 0s !important;
 }
 
+body {
+    max-width: 3240px;
+    margin: auto;
+}
+
 /* NAVBAR */
 
 li,
@@ -228,6 +233,7 @@ button {
 .img-hero-container {
     display: flex;
     width: 100%;
+    height: auto;
 
 }
 
@@ -235,17 +241,15 @@ button {
 
 .img-hero {
     flex: 50%;
-    height: auto;
     width: 50%;
+
 }
 
 .img-hero img {
     max-width: 100%;
 }
 
-.img-hero3 {
-    display: none;
-}
+
 
 /*IMAGE BUTTON*/
 
@@ -256,19 +260,30 @@ button {
     margin-top: 28px;
 }
 
-.hero-btn-container button {
+.hero-btn-container>a>button {
     padding: 8px 16px;
     border-radius: 8px;
-    border: 1px solid var(--black);
-    background-color: white;
+    background-color: var(--darkSecondary);
+    color: white;
+    border-color: var(--darkSecondaryActive);
+    border-style: none;
+    transition: .2s;
+}
+
+
+
+.hero-btn-container>a>button:hover {
+    background-color: var(--darkSecondaryActive);
+    color: white;
+    border-color: var(--darkSecondaryActive);
 }
 
 .section-divider {
     width: 100%;
     height: 1px;
     background-color: var(--dividers);
-    margin-top: 56px;
-    margin-bottom: 56px;
+    margin-top: 112px;
+    margin-bottom: 112px;
 }
 
 /*OM-OSS*/
@@ -313,19 +328,43 @@ button {
 
 }
 
-/* DESKTOP */
 
+/* Produkter */
+
+.products-container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.product-card {
+    text-align: center;
+    max-width: 300px;
+    margin: auto;
+    margin-bottom: 56px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    font-family: 'Raleway', sans-serif;
+}
+
+.product-card>h3,
+p {
+    margin-bottom: 20px;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+
+/* iPad */
 
 @media screen and (min-width: 768px) {
 
-    .img-hero3 {
-        display: flex;
-    }
+
 
     .main-container {
-        display: flex;
+        max-width: 1260px;
         margin: auto;
-        max-width: 960px;
     }
 
     .om-oss-container {
@@ -338,19 +377,45 @@ button {
         order: 4;
     }
 
+
+    /* Produkter iPad */
+
+    .products-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
 }
 
 
+/* LAPTOP */
 
 @media screen and (min-width: 960px) {
+
+    .hero-container h1 {
+        font-size: 72px;
+    }
+
+    .hero-container h2 {
+        font-size: 28px;
+    }
+
+    .hero-container h3 {
+        font-size: 24px;
+    }
 
     /* NAVBAR */
     li,
     a,
     button {
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 600;
         color: var(--black);
+    }
+
+    .nav-links>li>a {
+        font-size: 21px;
+        margin-top: 0;
     }
 
     .topnav {
@@ -412,10 +477,17 @@ button {
         letter-spacing: 1px;
         margin-right: 30px;
         cursor: pointer;
+        transition: .2s;
     }
 
     .cta-btn button:hover {
         background-color: var(--darkSecondaryActive);
+    }
+
+    .hero-btn-container>a>button {
+        color: var(--darkSecondary);
+        background-color: white;
+        border: 1px solid var(--darkSecondary);
     }
 
     .nav-divider {
@@ -434,6 +506,22 @@ button {
     .ig-desk {
         cursor: pointer;
     }
+
+    .hero-btn-container button {
+        font-size: 24px;
+        background-color: white;
+        color: var(--darkSecondary);
+        border: 1px solid var(--darkSecondary);
+
+    }
+
+    /* produkter laptop */
+
+    .products-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+
 }
 
-/* HERO SECTION - DESKTOP */
+/* HERO SECTION - Laptop */
