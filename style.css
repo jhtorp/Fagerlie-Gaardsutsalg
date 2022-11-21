@@ -84,6 +84,11 @@ button {
     display: none;
 }
 
+.socials-right-a {
+    display: flex;
+    justify-content: center;
+}
+
 .cta-btn button {
     display: none;
 }
