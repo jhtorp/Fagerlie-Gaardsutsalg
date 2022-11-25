@@ -442,25 +442,38 @@ button {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 2fr 1fr;
-    width: 100%;
+    max-width: 100%;
     margin-bottom: 56px;
     font-family: 'Raleway', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 24px;
 }
 
 .form-item {
     display: grid;
     width: 80%;
-    margin: auto;
-    margin-bottom: 24px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.form-item>input,
+.form-item input,
 textarea {
-    padding: 12px 4px;
+    padding: 8px 4px;
     border-radius: 10px;
     border: 0.5px solid var(--formBorder);
     outline: none;
     resize: none;
+}
+
+.form-item input:focus,
+.form-item textarea:focus {
+    border: 0.5px solid var(--black);
+}
+
+.form-item [type=text],
+.form-item [type=textarea] {
+    font-family: 'Raleway', sans-serif;
 }
 
 .form-item>label {
@@ -468,12 +481,25 @@ textarea {
 }
 
 input[type=submit] {
-    width: 20%;
+    background-color: var(--darkSecondary);
+    border: 0;
+    padding: 12px 0 12px 0;
+    font-size: 16px;
+    color: white;
+    width: 40%;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: var(--darkSecondaryActive);
+    transition: .2s;
+
 }
 
 .submit-btn {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .kontaktskjema-header {
@@ -492,6 +518,12 @@ input[type=submit] {
 
 
 
+/*Footer*/
+
+.footer {
+    text-align: center;
+    padding: 10px 0 10px 0;
+}
 
 
 /* iPad */

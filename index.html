@@ -37,7 +37,7 @@
             <ul class="nav-links">
                 <li><a href="#om-oss" class="nav-link">Om oss</a></li>
                 <li><a href="#produkter" class="nav-link">Produkter</a></li>
-                <li><a href="#" class="nav-link">Kontakt</a></li>
+                <li><a href="#kontakt" class="nav-link">Kontakt</a></li>
             </ul>
             <a href="#aapningstider" class="cta-btn"><button>Åpningstider</button></a>
             <div class="nav-divider"></div>
@@ -277,23 +277,23 @@
         <div class="section-divider"></div>
 
         <section class="kontakt-section">
-            <h2 class="section-header kontaktskjema-header"> Kontaktskjema</h2>
+            <h2 class="section-header kontaktskjema-header" id="kontakt"> Kontaktskjema</h2>
             <form class="form-grid" action="https://formspree.io/f/xqkjngyj" method="POST">
 
                 <div class="form-item">
                     <label for="name">Navn</label>
-                    <input type="text" name="name" id="name" placeholder="Ditt navn...">
+                    <input type="text" name="name" id="name" placeholder="Ditt navn..." required>
                 </div>
 
                 <div class="form-item">
                     <label for="epost">E-post</label>
-                    <input type="email" name="epost" id="epost" placeholder="Din epost...">
+                    <input type="email" name="epost" id="epost" placeholder="Din epost..." required>
                 </div>
 
                 <div class="form-item textarea-item">
                     <label for="message">Melding</label>
                     <textarea class="textarea" rows="6" type="textarea" name="message" id="message"
-                        placeholder="Din melding..."></textarea>
+                        placeholder="Din melding..." required></textarea>
                 </div>
 
                 <div class="form-item submit-btn">
@@ -306,6 +306,7 @@
 
     </main>
 
+    <footer class="footer"> &#169; Fagerlie Gårdsutsalg</footer>
 
     <script src="app.js"></script>
 </body>
