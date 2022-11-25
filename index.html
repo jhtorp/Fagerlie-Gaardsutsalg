@@ -39,7 +39,7 @@
                 <li><a href="#produkter" class="nav-link">Produkter</a></li>
                 <li><a href="#" class="nav-link">Kontakt</a></li>
             </ul>
-            <a href="#" class="cta-btn"><button>Åpningstider</button></a>
+            <a href="#aapningstider" class="cta-btn"><button>Åpningstider</button></a>
             <div class="nav-divider"></div>
             <a class="socials-right-a" href="http://www.facebook.com/profile.php?id=100065624984062" target="_blank">
                 <img class="socials-desk fb-desk" src="./bilder/square-facebook.svg" alt="Link til facebookside">
@@ -74,17 +74,17 @@
 
         <div class="img-hero-container">
             <div class="img-hero img-hero1">
-                <img src="./bilder/IMG_3038.JPG" alt="">
+                <img src="./bilder/IMG_3038-min.JPG" alt="">
             </div>
             <div class="img-hero img-hero2">
-                <img src="./bilder/IMG_2919.JPG" alt="">
+                <img src="./bilder/IMG_2919-min.JPG" alt="">
             </div>
             <div class="img-hero img-hero3">
-                <img src="./bilder/IMG_2968.JPG" alt="">
+                <img src="./bilder/IMG_2968-min.JPG" alt="">
             </div>
         </div>
         <div class="hero-btn-container">
-            <a href="#" class="hero-btn"><button>Åpningstider</button></a>
+            <a href="#aapningstider" class="hero-btn"><button>Åpningstider</button></a>
         </div>
     </header>
 
@@ -112,7 +112,7 @@
             </div>
 
             <div class="om-oss-item om-oss-img1">
-                <img src="./bilder/IMG_2954.JPG" alt="">
+                <img src="./bilder/IMG_2954-min.JPG" alt="">
             </div>
 
 
@@ -136,14 +136,20 @@
             </div>
 
             <div class="om-oss-item om-oss-img2">
-                <img src="./bilder/IMG_3032.JPG" alt="">
+                <img src="./bilder/IMG_3032-min.JPG" alt="">
             </div>
         </section>
+
+
 
         <div class="section-divider"></div>
 
 
-        <section class="products-container" id="produkter">
+
+        <div class="section-header-container produkter-header">
+            <h2 class="section-header produkter-h2" id="produkter">Produkter</h2>
+        </div>
+        <section class="products-container">
 
             <div class="product-card p1-card">
                 <img class="p1-img" src="https://via.placeholder.com/300x400.png?text=produkt1" alt=""
@@ -213,8 +219,90 @@
 
         </section>
 
+
+
         <div class="section-divider"></div>
 
+
+
+        <div class="section-header-container aapning-header">
+            <h2 class="section-header aapning-h2" id="aapningstider">Åpningstider</h2>
+        </div>
+        <section class="aapning-kart-grid">
+
+
+            <div class="aapning-container">
+
+
+                <div class="dager man">
+                    <h4>Mandag:</h4>
+                    <p class="tid">Kommer snart!</p>
+                </div>
+                <div class="dager tir">
+                    <h4>Tirsdag:</h4>
+                    <p class="tid">Kommer snart!</p>
+                </div>
+                <div class="dager ons">
+                    <h4>Onsdag:</h4>
+                    <p class="tid">Kommer snart!</p>
+                </div>
+                <div class="dager tor">
+                    <h4>Torsdag:</h4>
+                    <p class="tid">Kommer snart!</p>
+                </div>
+                <div class="dager fre">
+                    <h4>Fredag:</h4>
+                    <p class="tid">Kommer snart!</p>
+                </div>
+                <div class="dager lør">
+                    <h4>Lørdag:</h4>
+                    <p class="tid">Kommer snart!</p>
+                </div>
+                <div class="dager søn">
+                    <h4>Søndag:</h4>
+                    <p class="tid">Kommer snart!</p>
+                </div>
+            </div>
+
+            <div class="kart-container">
+                <iframe class="kart"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d821.0521428710265!2d10.896719766009792!3d60.69580031958318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4641c2b2996a5ec7%3A0xb61eeb021bd8b1c1!2sStarumsvegen%20126%2C%202850%20Lena!5e0!3m2!1sno!2sno!4v1669297855443!5m2!1sno!2sno"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+
+        </section>
+
+        <div class="section-divider"></div>
+
+        <section class="kontakt-section">
+            <h2 class="section-header kontaktskjema-header"> Kontaktskjema</h2>
+            <form class="form-grid" action="https://formspree.io/f/xqkjngyj" method="POST">
+
+                <div class="form-item">
+                    <label for="name">Navn</label>
+                    <input type="text" name="name" id="name" placeholder="Ditt navn...">
+                </div>
+
+                <div class="form-item">
+                    <label for="epost">E-post</label>
+                    <input type="email" name="epost" id="epost" placeholder="Din epost...">
+                </div>
+
+                <div class="form-item textarea-item">
+                    <label for="message">Melding</label>
+                    <textarea class="textarea" rows="6" type="textarea" name="message" id="message"
+                        placeholder="Din melding..."></textarea>
+                </div>
+
+                <div class="form-item submit-btn">
+                    <input type="submit" value="Send" name="submit">
+                </div>
+
+            </form>
+
+        </section>
 
     </main>
 
