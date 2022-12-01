@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 
 <head>
     <meta charset="UTF-8">
@@ -13,7 +13,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Fagerlie Gårdsutsalg</title>
+    <meta name="description"
+        content="Fagerlie Gårdsutsalg tilbyr fersk bakst i flotte omgivelser her på Starum på Toten. Baksten blir servert i et gammelt bakeri som nylig har blitt restaurert. Velkommen!">
+    <title>Fagerlie Gårdsutsalg | Fersk bakst på Toten</title>
 </head>
 
 <body class="preload">
@@ -276,28 +278,44 @@
 
         <div class="section-divider"></div>
 
+
+
         <section class="kontakt-section">
+
             <h2 class="section-header kontaktskjema-header" id="kontakt"> Kontaktskjema</h2>
+
             <form class="form-grid" action="https://formspree.io/f/xqkjngyj" method="POST">
 
-                <div class="form-item">
-                    <label for="name">Navn</label>
+
+
+                <label class="form-item name-item" for="name"><span>Navn</span>
                     <input type="text" name="name" id="name" placeholder="Ditt navn..." required>
-                </div>
+                </label>
 
-                <div class="form-item">
-                    <label for="epost">E-post</label>
+
+
+
+                <label class="form-item email-item" for="epost"><span>E-post</span>
+
                     <input type="email" name="epost" id="epost" placeholder="Din epost..." required>
-                </div>
 
-                <div class="form-item textarea-item">
-                    <label for="message">Melding</label>
+                </label>
+
+
+
+
+                <label class="form-item textarea-item" for="message"><span>Melding</span>
+
                     <textarea class="textarea" rows="6" type="textarea" name="message" id="message"
                         placeholder="Din melding..." required></textarea>
-                </div>
 
-                <div class="form-item submit-btn">
+                </label>
+
+
+
+                <div class="form-item submit-btn btn-item">
                     <input type="submit" value="Send" name="submit">
+
                 </div>
 
             </form>

@@ -33,17 +33,25 @@ body {
     margin: auto;
 }
 
+h1,
+h2,
+h3,
+h4,
+p {
+    color: var(--black);
+}
+
 /* NAVBAR */
 
 li,
 a,
 button {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 21px;
-    font-weight: 500;
-    text-decoration: none;
-    color: var(--black);
+
+
 }
+
+
 
 .hero-container h1 {
     color: var(--black);
@@ -175,7 +183,7 @@ button {
     width: 0%;
     height: 1px;
     display: block;
-    transition: all 0.3s ease;
+    transition: all .4s ease;
     bottom: -20%;
 }
 
@@ -191,8 +199,13 @@ button {
     position: relative;
     margin-top: 10%;
     font-size: 28px;
-
 }
+
+.nav-links li a {
+    color: var(--black);
+}
+
+
 
 
 
@@ -204,7 +217,7 @@ button {
 }
 
 .hero-container>* {
-    font-family: 'Cormorant', serif;
+    font-family: 'Cormorant Garamond', serif;
 }
 
 .heading-container {
@@ -224,6 +237,7 @@ button {
 }
 
 .pre-head-container h3 {
+    letter-spacing: 2px;
     font-size: 20px;
     font-weight: 300;
 }
@@ -231,7 +245,7 @@ button {
 .main-head-container {
     margin-bottom: 20px;
     font-family: 'Dancing Script';
-    font-size: 20px;
+    font-size: 36px;
 }
 
 .sub-head-container h2 {
@@ -301,7 +315,7 @@ button {
 .om-oss-container {
     display: flex;
     flex-direction: column;
-    font-family: 'Cormorant', serif;
+    font-family: 'Cormorant Garamond', serif;
     color: var(--black);
 
 }
@@ -341,10 +355,13 @@ button {
 
 /* Produkter */
 
+
+
 .section-header {
     text-align: center;
     font-family: 'Cormorant Garamond', serif;
     font-size: 32px;
+    color: var(--black);
 }
 
 .section-header-container {
@@ -381,16 +398,19 @@ button {
 /* Åpning/Kart */
 
 .aapning-container {
-    display: grid;
-    margin-bottom: 56px;
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
 }
 
 .dager {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     text-align: center;
+    align-items: center;
     border-bottom: 1px solid var(--dividers);
-    padding: 14px 0 14px 0;
+    height: 100%;
 
 }
 
@@ -407,7 +427,7 @@ button {
 
 
 .aapning-kart-grid h4 {
-    font-family: 'Cormorant', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 24px;
 }
 
@@ -415,6 +435,7 @@ button {
     display: grid;
     justify-content: center;
     align-items: center;
+    grid-template-rows: 1fr 1fr;
 }
 
 .kart-container {
@@ -441,29 +462,35 @@ button {
 .form-grid {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 2fr 1fr;
-    max-width: 100%;
+    grid-template-rows: 1fr 1fr 3fr 1fr;
+    width: 100%;
+    max-width: 900px;
     margin-bottom: 56px;
     font-family: 'Raleway', sans-serif;
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline: auto;
     gap: 24px;
 }
 
 .form-item {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline: auto;
+}
+
+.form-item span {
+    padding-left: 2px;
 }
 
 .form-item input,
-textarea {
-    padding: 8px 4px;
+.form-item textarea {
+    padding: 12px 4px;
     border-radius: 10px;
     border: 0.5px solid var(--formBorder);
+    border-style: solid;
     outline: none;
     resize: none;
+    margin-top: 8px;
 }
 
 .form-item input:focus,
@@ -487,7 +514,10 @@ input[type=submit] {
     font-size: 16px;
     color: white;
     width: 40%;
+    max-width: 180px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
 }
 
 input[type=submit]:hover {
@@ -526,6 +556,7 @@ input[type=submit]:hover {
 }
 
 
+
 /* iPad */
 
 @media screen and (min-width: 768px) {
@@ -552,6 +583,34 @@ input[type=submit]:hover {
 
     .products-container {
         grid-template-columns: 1fr 1fr;
+    }
+
+
+
+    /* Kontaktskjema grid */
+
+
+
+
+    .form-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 3fr 1fr;
+    }
+
+    .textarea-item {
+        grid-column: 1/3;
+    }
+
+    .name-item {
+        margin-inline: auto 0;
+    }
+
+    .email-item {
+        margin-inline: 0 auto;
+    }
+
+    .btn-item {
+        grid-column: 1/3;
     }
 
 
@@ -658,6 +717,8 @@ input[type=submit]:hover {
         color: var(--darkSecondary);
         background-color: white;
         border: 1px solid var(--darkSecondary);
+        font-size: 32px;
+        cursor: pointer;
     }
 
     .nav-divider {
@@ -677,13 +738,6 @@ input[type=submit]:hover {
         cursor: pointer;
     }
 
-    .hero-btn-container button {
-        font-size: 24px;
-        background-color: white;
-        color: var(--darkSecondary);
-        border: 1px solid var(--darkSecondary);
-
-    }
 
     /* produkter laptop */
 
@@ -697,7 +751,8 @@ input[type=submit]:hover {
 
     .aapning-kart-grid {
         justify-content: space-around;
-        grid-template-columns: 40% 60%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
     }
 
     .kart-container {
@@ -705,4 +760,93 @@ input[type=submit]:hover {
     }
 
 
+    /*Åpning Grid */
+
+
+
+
+
+}
+
+
+
+
+/* CSS RESET */
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+    all: unset;
+    display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reapply the pointer cursor for anchor tags */
+a,
+button {
+    cursor: revert;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol,
+ul,
+menu {
+    list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+    max-width: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+    border-collapse: collapse;
+}
+
+/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
+input,
+textarea {
+    -webkit-user-select: auto;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+    white-space: revert;
+}
+
+/* minimum style to allow to style meter element */
+meter {
+    -webkit-appearance: revert;
+    appearance: revert;
+}
+
+/* reset default text opacity of input placeholder */
+::placeholder {
+    color: unset;
+}
+
+/* fix the feature of 'hidden' attribute.
+   display:revert; revert to element instead of attribute */
+:where([hidden]) {
+    display: none;
+}
+
+/* revert for bug in Chromium browsers
+   - fix for the content editable attribute will work properly.
+   - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
+:where([contenteditable]:not([contenteditable="false"])) {
+    -moz-user-modify: read-write;
+    -webkit-user-modify: read-write;
+    overflow-wrap: break-word;
+    -webkit-line-break: after-white-space;
+    -webkit-user-select: auto;
+}
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable="true"]) {
+    -webkit-user-drag: element;
 }
